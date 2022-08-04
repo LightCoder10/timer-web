@@ -2,7 +2,7 @@
 const express=require('express');
 const path=require('path');
 const app=express();
-const port=process.env.port || 8000;
+const port=process.env.PORT || 8000;
 const bodyparse=require('body-parser');
 //MONGOOSE SPECIFIC STUFFS
 const mongoose = require('mongoose');
@@ -53,6 +53,6 @@ app.post('/contact', (req, res)=>{
 
 
 // START THE SERVER
-app.listen(port, ()=>{
+app.listen(process.env.PORT || 8000, ()=>{
     console.log(`The application started successfully on port ${port}`);
 });
