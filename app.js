@@ -2,7 +2,7 @@
 const express=require('express');
 const path=require('path');
 const app=express();
-const port=8000;
+const port=process.env.port || 8000;
 const bodyparse=require('body-parser');
 //MONGOOSE SPECIFIC STUFFS
 const mongoose = require('mongoose');
